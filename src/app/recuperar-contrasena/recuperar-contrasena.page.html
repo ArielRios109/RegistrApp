@@ -1,0 +1,25 @@
+<!-- recuperar-contrasena.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario" name="usuario" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nueva Contraseña</ion-label>
+      <ion-input [(ngModel)]="nuevaContrasena" name="nuevaContrasena" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="cambiarContrasena()">Confirmar</ion-button>
+  </div>
+</ion-content>

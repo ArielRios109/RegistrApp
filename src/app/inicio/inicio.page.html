@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button color="primary"></ion-back-button>
+      </ion-buttons>
+      Página de inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div>
+      <h1 class="centrado" style="color: white;">Bienvenido, {{ usuario }}</h1>
+      <br>
+      <ion-button class="centrado" (click)="openCamera()">Escanear QR</ion-button>
+      <br>
+      <div id="video-container">
+        <video id="video" style="width: 100%; max-width: 400px;" autoplay muted playsinline></video>
+      </div>
+    </div>
+  </div>
+</ion-content>
