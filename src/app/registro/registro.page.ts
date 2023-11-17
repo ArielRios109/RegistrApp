@@ -20,7 +20,6 @@ export class RegistroPage implements OnInit {
   regionSeleccionada: any;
   comunaSeleccionada: any;
 
-
   constructor(
     private apiService: ApiService,
     private router: Router,
