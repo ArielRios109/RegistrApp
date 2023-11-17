@@ -89,6 +89,8 @@ export class RegistroPage implements OnInit {
       const listaUsuariosJSON = JSON.stringify(listaUsuarios);
   
       // Guarda la lista de usuarios en Capacitor Preferences
+      await Preferences.set({ key: 'nombreUsuario', value: usuario.nombre });
+
       await Preferences.set({ key: 'usuarios', value: listaUsuariosJSON });
   
       const alert = await this.alertController.create({

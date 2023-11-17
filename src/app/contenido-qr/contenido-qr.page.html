@@ -9,15 +9,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="wrapper" style="color: white;">
+  <div>
       <h2>Contenido del código QR:</h2>
       <p>{{ qrContent }}</p>
       <h2>Información del Usuario</h2>  <img class="centrado" [src]="selfie" alt="Selfie" style="width: 150px;">  
       <p><strong>Nombre:</strong> {{ usuario }}</p>
-      <p><strong>Apellido:</strong> {{ apellido }}</p>
-      <p><strong>RUT:</strong> {{ rut }}</p>
-      <p><strong>Región:</strong> {{ region }}</p>
-      <p><strong>Comuna:</strong> {{ comuna }}</p>
       <h2>Ubicación</h2>
       <p><strong>Latitud:</strong> {{ latitud }}</p>
       <p><strong>Longitud:</strong> {{ longitud }}</p>

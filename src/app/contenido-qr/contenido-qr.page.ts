@@ -28,31 +28,10 @@ export class ContenidoQrPage {
     await this.obtenerUbicacion();
 
     const nombreResult = await Preferences.get({ key: 'nombreUsuario' });
-    const apellidoResult = await Preferences.get({ key: 'apellidoUsuario' });
-    const rutResult = await Preferences.get({ key: 'rutUsuario' });
-    const regionResult = await Preferences.get({ key: 'regionUsuario' });
-    const comunaResult = await Preferences.get({ key: 'comunaUsuario' });
-    const selfieResult = await Preferences.get({ key: 'selfie' });
 
 
     if (nombreResult.value) {
       this.usuario = nombreResult.value;
-    }
-    if (apellidoResult.value) {
-      this.apellido = apellidoResult.value;
-    }
-    if (rutResult.value) {
-      this.rut = rutResult.value;
-    }
-    if (regionResult.value) {
-      this.region = regionResult.value;
-    }
-    if (comunaResult.value) {
-      this.comuna = comunaResult.value;
-    }
-    
-    if (selfieResult.value) {
-      this.selfie = selfieResult.value;
     }
 
     Preferences.get({ key: 'qrContent' })

@@ -11,7 +11,7 @@ import jsQR, { QRCode } from 'jsqr';
 })
 export class InicioPage implements OnInit {
 
-  usuario: any;
+  usuario: string | null = null;
   selfie: string | undefined;
   qrContent: string | undefined;
   apellido: any;
@@ -22,10 +22,13 @@ export class InicioPage implements OnInit {
   constructor(private router: Router) { }
 
   async ngOnInit() {
-    // Obtiene el nombre de usuario almacenado en Capacitor Preferences
+    await this.obtenerUsuario();
+    console.log('Valor de usuario:', this.usuario);
+  }
+
+  async obtenerUsuario() {
     const { value } = await Preferences.get({ key: 'nombreUsuario' });
     this.usuario = value;
-
   }
 
   openCamera() {
